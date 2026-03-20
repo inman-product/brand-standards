@@ -21,11 +21,15 @@ export const nav: NavGroup[] = [
       { label: 'Access',  href: '/access' },
       { label: 'Intel',   href: '/intel' },
       { label: 'Awards',  href: '/awards' },
-      { label: 'Blueprint', href: '/blueprint' },
+      {
+        label: 'Insights By Blueprint',
+        href: '/insights-by-blueprint',
+      },
       {
         label: 'Events',
         href: '/events',
         sub: [
+          { label: 'Blueprint',          href: '/blueprint' },
           { label: 'Connect',            href: '/connect' },
           { label: 'Connect New York',   href: '/connect-new-york' },
           { label: 'Connect San Diego',  href: '/connect-san-diego' },
@@ -33,10 +37,6 @@ export const nav: NavGroup[] = [
           { label: 'On Tour — Nashville', href: '/on-tour-nashville' },
           { label: 'On Tour — Texas',    href: '/on-tour-texas' },
         ],
-      },
-      {
-        label: 'Insights By Blueprint',
-        href: '/insights-by-blueprint',
       },
     ],
   },
