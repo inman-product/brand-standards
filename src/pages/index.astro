@@ -1,3 +1,5 @@
 ---
-return Astro.redirect(`${import.meta.env.BASE_URL}brand-system`);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
+
+<meta http-equiv="refresh" content={`0;url=${base}/brand-system`} />
