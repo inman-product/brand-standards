@@ -1,55 +1,55 @@
 @font-face {
   font-family: 'HEX Franklin';
-  src: url('/assets/HEX_Franklin_v0.2_Variable.woff2') format('woff2');
+  src: url('/assets/fonts/HEX_Franklin_v0.2_Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-Regular-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-Regular-1v6.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-RegularItalic-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-RegularItalic-1v6.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-Medium-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-Medium-1v6.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-MediumItalic-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-MediumItalic-1v6.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-Bold-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-Bold-1v6.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Harriet Display';
-  src: url('/assets/HarrietDisplay-BoldItalic-1v6.otf') format('opentype');
+  src: url('/assets/fonts/HarrietDisplay-BoldItalic-1v6.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Tungsten';
-  src: url('/assets/Tungsten-Bold.otf') format('opentype');
+  src: url('/assets/fonts/Tungsten-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
