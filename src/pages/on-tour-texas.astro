@@ -2,8 +2,6 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
-import DownloadBtn from '../components/DownloadBtn.astro';
-import PhotoWidget from '../components/PhotoWidget.astro';
 import OnTourTexas from '../components/logos/OnTourTexas.astro';
 ---
 
@@ -19,10 +17,6 @@ import OnTourTexas from '../components/logos/OnTourTexas.astro';
       <LogoTile bg="dark" tall><OnTourTexas fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
       <LogoTile bg="blue" tall><OnTourTexas fill="#ffffff" dotFill="#ffffff" /></LogoTile>
     </LogoGrid>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/inman-ontour-texas-logos.zip" label="Download On Tour Texas Logos" />
-    </div>
   </div>
-  <PhotoWidget />
 
 </BrandLayout>

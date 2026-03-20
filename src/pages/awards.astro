@@ -3,7 +3,6 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
-import PhotoWidget from '../components/PhotoWidget.astro';
 ---
 
 <BrandLayout
@@ -18,9 +17,6 @@ import PhotoWidget from '../components/PhotoWidget.astro';
       <LogoTile bg="dark" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
       <LogoTile bg="blue" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
     </LogoGrid>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/inman-awards-logos.zip" label="Download Awards Logos" />
-    </div>
   </div>
 
   <div class="section">
@@ -60,7 +56,6 @@ import PhotoWidget from '../components/PhotoWidget.astro';
       </LogoTile>
     </div>
   </div>
-  <PhotoWidget />
 
 </BrandLayout>
 

@@ -2,8 +2,6 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
-import DownloadBtn from '../components/DownloadBtn.astro';
-import PhotoWidget from '../components/PhotoWidget.astro';
 import InmanIntelHorizontal from '../components/logos/InmanIntelHorizontal.astro';
 import InmanIntelStacked from '../components/logos/InmanIntelStacked.astro';
 import IntelIcon from '../components/logos/IntelIcon.astro';
@@ -49,12 +47,7 @@ import IntelIcon from '../components/logos/IntelIcon.astro';
       <LogoTile bg="blue" tall>
         <InmanIntelStacked fill="#fff" dotFill="#fff" />
       </LogoTile>
-    </LogoGrid>
-
-    <div class="btn-row">
-      <DownloadBtn href="#" label="Download Intel Logos" />
-    </div>
-  </div>
+    </LogoGrid>  </div>
 
   <!-- ICONS -->
   <div class="section">
@@ -84,12 +77,7 @@ import IntelIcon from '../components/logos/IntelIcon.astro';
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Solid</span>
       </div>
-    </div>
-    <div class="btn-row">
-      <DownloadBtn href="#" label="Download Intel Icons" />
-    </div>
-  </div>
+    </div>  </div>
 
-  <PhotoWidget />
 
 </BrandLayout>

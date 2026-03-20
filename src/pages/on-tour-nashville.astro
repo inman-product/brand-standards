@@ -2,8 +2,6 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
-import DownloadBtn from '../components/DownloadBtn.astro';
-import PhotoWidget from '../components/PhotoWidget.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -22,10 +20,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <img src={`${base}/assets/images/IOTN26_white_02.png`} style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville white" />
       </LogoTile>
     </LogoGrid>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/inman-ontour-nashville-logos.zip" label="Download On Tour Nashville Logos" />
-    </div>
   </div>
-  <PhotoWidget />
 
 </BrandLayout>
