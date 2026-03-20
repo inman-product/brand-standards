@@ -58,27 +58,53 @@ import SelectIcon from '../components/logos/SelectIcon.astro';
 
   <!-- ICONS -->
   <div class="section">
-    <div class="section-label">Icons</div>
+    <div class="section-label" id="icons-label">Icons — Light Mode</div>
     <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <!-- Dark icon (shown in light mode) -->
+      <div class="select-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <SelectIcon fill="#161a48" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="select-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <SelectIcon fill="#0a84ff" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="select-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <SelectIcon fill="#adafb2" dotFill="#adafb2" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="select-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+          <SelectIcon fill="#fff" dotFill="#0a84ff" solid />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Solid</span>
+      </div>
+      <!-- Light icon (shown in dark mode) -->
+      <div class="select-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <SelectIcon fill="#fff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
+      </div>
+      <div class="select-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <SelectIcon fill="#0a84ff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
+      </div>
+      <div class="select-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <SelectIcon fill="#adafb2" dotFill="#adafb2" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
+      </div>
+      <div class="select-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
           <SelectIcon fill="#fff" dotFill="#0a84ff" solid />
         </div>
@@ -93,3 +119,24 @@ import SelectIcon from '../components/logos/SelectIcon.astro';
   <PhotoWidget />
 
 </BrandLayout>
+
+<style>
+  .select-icon-dark { display: none; }
+  .select-icon-light { display: flex; }
+  :global([data-theme="dark"]) .select-icon-dark { display: flex; }
+  :global([data-theme="dark"]) .select-icon-light { display: none; }
+</style>
+
+<script>
+  function updateIconsLabel() {
+    const label = document.getElementById('icons-label');
+    if (!label) return;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    label.textContent = isDark ? 'Icons — Dark Mode' : 'Icons — Light Mode';
+  }
+
+  updateIconsLabel();
+
+  const observer = new MutationObserver(updateIconsLabel);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
