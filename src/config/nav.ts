@@ -21,6 +21,7 @@ export const nav: NavGroup[] = [
       { label: 'Access',  href: '/access' },
       { label: 'Intel',   href: '/intel' },
       { label: 'Awards',  href: '/awards' },
+      { label: 'Blueprint', href: '/blueprint' },
       {
         label: 'Events',
         href: '/events',
@@ -32,6 +33,10 @@ export const nav: NavGroup[] = [
           { label: 'On Tour — Nashville', href: '/on-tour-nashville' },
           { label: 'On Tour — Texas',    href: '/on-tour-texas' },
         ],
+      },
+      {
+        label: 'Insights By Blueprint',
+        href: '/insights-by-blueprint',
       },
     ],
   },
