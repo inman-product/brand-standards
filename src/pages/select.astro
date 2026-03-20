@@ -120,11 +120,11 @@ import SelectIcon from '../components/logos/SelectIcon.astro';
 
 </BrandLayout>
 
-<style>
-  .select-icon-dark { display: none; }
-  .select-icon-light { display: flex; }
-  :global([data-theme="dark"]) .select-icon-dark { display: flex; }
-  :global([data-theme="dark"]) .select-icon-light { display: none; }
+<style is:global>
+  .select-icon-dark { display: none !important; }
+  .select-icon-light { display: flex !important; }
+  [data-theme="dark"] .select-icon-dark { display: flex !important; }
+  [data-theme="dark"] .select-icon-light { display: none !important; }
 </style>
 
 <script>
