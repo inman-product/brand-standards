@@ -1,0 +1,79 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/global.css';
+import '../styles/layout.css';
+import '../styles/components.css';
+import '../styles/dark.css';
+
+export interface Props {
+  title: string;
+  eyebrow?: string;
+  titleSvg?: string; // for pages where the title is an SVG wordmark
+}
+
+const { title, eyebrow = 'Foundation', titleSvg } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Inman Brand Guidelines</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect x='-38.2' y='-26.7' fill='%2317184B' width='257.4' height='234'/%3E%3Cpath fill='%23FFFFFF' d='M118.2,167.5v1.1c-6.7-0.5-16.3-0.5-26.2-0.5c-10.1,0-19.3,0-26.9,0.5v-1.1c9.7-3.9,11.3-8.5,11.3-34.7V94.7c0-23.9-1.6-28-11.3-34v-1.1c16.1,0,27.1,0.2,42.5-0.2v73.8C107.6,159,109,163.6,118.2,167.5z'/%3E%3Ccircle fill='%230A80FF' cx='91.7' cy='30.1' r='15.5'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<Sidebar currentPath={currentPath} />
+
+<main class="main">
+  <div class="page">
+    <div class="page-header">
+      <div class="page-eyebrow">{eyebrow}</div>
+      {titleSvg
+        ? <Fragment set:html={titleSvg} />
+        : <div class="page-title">{title}</div>
+      }
+    </div>
+
+    <slot />
+  </div>
+</main>
+
+<script>
+  const sidebar  = document.querySelector('.sidebar') as HTMLElement;
+  const overlay  = document.getElementById('sidebarOverlay') as HTMLElement;
+  const toggle   = document.getElementById('menuToggle') as HTMLElement;
+  const themeToggle = document.getElementById('themeToggle') as HTMLInputElement;
+  const root = document.documentElement;
+
+  // ── THEME ──
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let isDark = stored === 'dark' || (!stored && prefersDark);
+
+  function applyTheme(dark: boolean) {
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    themeToggle.checked = dark;
+    isDark = dark;
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  applyTheme(isDark);
+  themeToggle.addEventListener('change', () => applyTheme(themeToggle.checked));
+
+  // ── MOBILE MENU ──
+  function openMenu()  { sidebar.classList.add('open');    overlay.classList.add('open'); }
+  function closeMenu() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+  toggle.addEventListener('click', () => sidebar.classList.contains('open') ? closeMenu() : openMenu());
+  overlay.addEventListener('click', closeMenu);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+---
+export interface Props {
+  bg: 'light' | 'gray' | 'dark' | 'blue';
+  tall?: boolean;
+  style?: string;
+}
+
+const { bg, tall = false, style } = Astro.props;
+---
+
+<div
+  class:list={['logo-tile', bg, { tall }]}
+  style={style}
+>
+  <slot />
+</div>

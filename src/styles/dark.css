@@ -1,0 +1,23 @@
+[data-theme="dark"] {
+  --bg:             #111113;
+  --surface:        #1c1c1e;
+  --border:         #2e2e30;
+  --text:           #f0f0f0;
+  --text-secondary: #999;
+  --text-muted:     #555;
+}
+
+[data-theme="dark"] .type-rule-icon.do   { background: #1a3a24; color: #4caf70; }
+[data-theme="dark"] .type-rule-icon.dont { background: #3a1a1a; color: #e57373; }
+[data-theme="dark"] .download-btn.dark   { background: #2a2f7a; }
+[data-theme="dark"] .page-header svg path[fill="#161a48"],
+[data-theme="dark"] .page-header svg circle[fill="#161a48"] { fill: #fff; }
+
+[data-theme="light"] {
+  --bg:             #f5f5f7;
+  --surface:        #ffffff;
+  --border:         #e8e8e8;
+  --text:           #1a1a1a;
+  --text-secondary: #444;
+  --text-muted:     #aaa;
+}

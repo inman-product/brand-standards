@@ -1,0 +1,77 @@
+---
+export interface Props {
+  href?: string;
+}
+const { href = '#' } = Astro.props;
+---
+
+<a class="photo-widget" href={href} target="_blank" rel="noopener noreferrer">
+  <div class="photo-widget-thumb">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="10" width="36" height="28" rx="3" stroke="#4a7dff" stroke-width="2" fill="none"/>
+      <circle cx="17" cy="21" r="4" stroke="#4a7dff" stroke-width="2" fill="none"/>
+      <path d="M6 32l10-8 8 6 6-4 12 8" stroke="#4a7dff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+  <div class="photo-widget-body">
+    <div class="photo-widget-title">Images</div>
+    <div class="photo-widget-desc">Versatile imagery across all Inman products. Authentic, professional, people-forward.</div>
+    <div class="photo-widget-link">Access images <span>&rarr;</span></div>
+  </div>
+</a>
+
+<style>
+  .photo-widget {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 40px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s var(--ease);
+  }
+  .photo-widget:hover {
+    border-color: var(--blue);
+  }
+  .photo-widget-thumb {
+    flex-shrink: 0;
+    width: 140px;
+    height: 100px;
+    background: var(--dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-widget-body {
+    flex: 1;
+  }
+  .photo-widget-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .photo-widget-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .photo-widget-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+  }
+  .photo-widget-link span {
+    display: inline-block;
+    transition: transform 0.2s var(--ease);
+  }
+  .photo-widget:hover .photo-widget-link span {
+    transform: translateX(3px);
+  }
+</style>

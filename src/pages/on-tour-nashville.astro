@@ -1,0 +1,29 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
+import PhotoWidget from '../components/PhotoWidget.astro';
+---
+
+<BrandLayout
+  title="On Tour — Nashville"
+  eyebrow="Events"
+>
+  <div class="section">
+    <div class="section-label">Logos</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall>
+        <img src="/assets/web_logo_o_date.png" style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <img src="/assets/IOTN26_white_02.png" style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville white" />
+      </LogoTile>
+    </LogoGrid>
+    <div class="btn-row">
+      <DownloadBtn href="assets/inman-ontour-nashville-logos.zip" label="Download On Tour Nashville Logos" />
+    </div>
+  </div>
+  <PhotoWidget />
+
+</BrandLayout>

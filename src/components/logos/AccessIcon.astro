@@ -1,0 +1,23 @@
+---
+export interface Props {
+  fill: string;
+  dotFill: string;
+  solid?: boolean;
+}
+
+const { fill, dotFill, solid = false } = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.44 68.44" style="width:60px;height:60px;">
+  {solid ? (
+    <>
+      <polygon fill={dotFill} points="68.44 68.44 34.22 68.44 0 68.44 0 25.08 34.22 0 68.44 25.08 68.44 68.44"/>
+      <path fill={fill} d="M41.85,50.5h-15.24l-2.43,6.7H15.9L29.79,20.98h9.24l13.89,36.22h-8.65l-2.43-6.7Zm-12.97-6.16h10.76l-5.35-14.54h-.11l-5.3,14.54Z"/>
+    </>
+  ) : (
+    <>
+      <path fill={fill} d="M41.83,50.5h-15.24l-2.43,6.7H15.88L29.77,20.98h9.24l13.89,36.22h-8.65l-2.43-6.7Zm-12.97-6.16h10.76l-5.35-14.54h-.11l-5.3,14.54Z"/>
+      <path fill={dotFill} d="M34.39,7.78l27.95,20.49V62.17H6.45V28.26L34.39,7.78m0-7.78L.17,25.08v43.36H68.61V25.08L34.39,0h0Z"/>
+    </>
+  )}
+</svg>

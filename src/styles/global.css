@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'HEX Franklin';
+  src: url('/assets/HEX_Franklin_v0_2_Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-Regular-1v6.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-RegularItalic-1v6.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-Medium-1v6.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-MediumItalic-1v6.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-Bold-1v6.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harriet Display';
+  src: url('/assets/HarrietDisplay-BoldItalic-1v6.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Tungsten';
+  src: url('/assets/Tungsten-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:      #0a84ff;
+  --dark:      #161a48;
+  --red:       #ff0a0a;
+  --sidebar-w: 210px;
+  --font:      'HEX Franklin', sans-serif;
+  --ease:      cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light mode tokens */
+  --bg:             #f5f5f7;
+  --surface:        #ffffff;
+  --border:         #e8e8e8;
+  --text:           #1a1a1a;
+  --text-secondary: #444;
+  --text-muted:     #aaa;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
