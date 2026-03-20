@@ -6,9 +6,15 @@ export interface Props {
 }
 
 const { currentPath } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+function withBase(href: string) {
+  return `${base}${href}`;
+}
 
 function isActive(href: string) {
-  return currentPath === href || currentPath === href + '/';
+  const full = withBase(href);
+  return currentPath === full || currentPath === full + '/';
 }
 ---
 
@@ -43,19 +49,19 @@ function isActive(href: string) {
         {group.items.map((item) => (
           'sub' in item ? (
             <>
-              <a href={item.href} class:list={['nav-item', { active: isActive(item.href) }]}>
+              <a href={withBase(item.href)} class:list={['nav-item', { active: isActive(item.href) }]}>
                 {item.label}
               </a>
               <div class="nav-sub">
                 {item.sub.map((subItem) => (
-                  <a href={subItem.href} class:list={[{ active: isActive(subItem.href) }]}>
+                  <a href={withBase(subItem.href)} class:list={[{ active: isActive(subItem.href) }]}>
                     {subItem.label}
                   </a>
                 ))}
               </div>
             </>
           ) : (
-            <a href={item.href} class:list={[{ active: isActive(item.href) }]}>
+            <a href={withBase(item.href)} class:list={[{ active: isActive(item.href) }]}>
               {item.label}
             </a>
           )
