@@ -2,6 +2,7 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
 import InmanIntelHorizontal from '../components/logos/InmanIntelHorizontal.astro';
 import InmanIntelStacked from '../components/logos/InmanIntelStacked.astro';
 import IntelIcon from '../components/logos/IntelIcon.astro';
@@ -51,33 +52,83 @@ import IntelIcon from '../components/logos/IntelIcon.astro';
 
   <!-- ICONS -->
   <div class="section">
-    <div class="section-label">Icons</div>
+    <div class="section-label" id="icons-label">Icons — Light Mode</div>
     <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <!-- Light mode icons -->
+      <div class="intel-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <IntelIcon fill="#161a48" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="intel-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <IntelIcon fill="#0a84ff" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="intel-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <IntelIcon fill="#adafb2" dotFill="#adafb2" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="intel-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
           <IntelIcon fill="#fff" dotFill="#0a84ff" solid />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Solid</span>
       </div>
-    </div>  </div>
-
+      <!-- Dark mode icons -->
+      <div class="intel-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <IntelIcon fill="#fff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
+      </div>
+      <div class="intel-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <IntelIcon fill="#0a84ff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
+      </div>
+      <div class="intel-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <IntelIcon fill="#adafb2" dotFill="#adafb2" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
+      </div>
+      <div class="intel-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+          <IntelIcon fill="#fff" dotFill="#0a84ff" solid />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Solid</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Inman_Intel_Icons.zip" label="Download Intel Icons" />
+    </div>
+  </div>
 
 </BrandLayout>
+
+<style is:global>
+  .intel-icon-dark { display: none !important; }
+  .intel-icon-light { display: flex !important; }
+  [data-theme="dark"] .intel-icon-dark { display: flex !important; }
+  [data-theme="dark"] .intel-icon-light { display: none !important; }
+</style>
+
+<script>
+  function updateIconsLabel() {
+    const label = document.getElementById('icons-label');
+    if (!label) return;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    label.textContent = isDark ? 'Icons — Dark Mode' : 'Icons — Light Mode';
+  }
+
+  updateIconsLabel();
+
+  const observer = new MutationObserver(updateIconsLabel);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
