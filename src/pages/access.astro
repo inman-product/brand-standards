@@ -56,27 +56,53 @@ import AccessIcon from '../components/logos/AccessIcon.astro';
 
   <!-- ICONS -->
   <div class="section">
-    <div class="section-label">Icons</div>
+    <div class="section-label" id="icons-label">Icons — Light Mode</div>
     <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <!-- Light mode icons -->
+      <div class="access-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <AccessIcon fill="#161a48" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="access-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <AccessIcon fill="#0a84ff" dotFill="#0a84ff" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="access-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
           <AccessIcon fill="#adafb2" dotFill="#adafb2" />
         </div>
         <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div class="access-icon-light" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+          <AccessIcon fill="#fff" dotFill="#0a84ff" solid />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Solid</span>
+      </div>
+      <!-- Dark mode icons -->
+      <div class="access-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <AccessIcon fill="#fff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue Duo</span>
+      </div>
+      <div class="access-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <AccessIcon fill="#0a84ff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Blue</span>
+      </div>
+      <div class="access-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <AccessIcon fill="#adafb2" dotFill="#adafb2" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Gray</span>
+      </div>
+      <div class="access-icon-dark" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
           <AccessIcon fill="#fff" dotFill="#0a84ff" solid />
         </div>
@@ -89,3 +115,24 @@ import AccessIcon from '../components/logos/AccessIcon.astro';
   </div>
 
 </BrandLayout>
+
+<style is:global>
+  .access-icon-dark { display: none !important; }
+  .access-icon-light { display: flex !important; }
+  [data-theme="dark"] .access-icon-dark { display: flex !important; }
+  [data-theme="dark"] .access-icon-light { display: none !important; }
+</style>
+
+<script>
+  function updateIconsLabel() {
+    const label = document.getElementById('icons-label');
+    if (!label) return;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    label.textContent = isDark ? 'Icons — Dark Mode' : 'Icons — Light Mode';
+  }
+
+  updateIconsLabel();
+
+  const observer = new MutationObserver(updateIconsLabel);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
