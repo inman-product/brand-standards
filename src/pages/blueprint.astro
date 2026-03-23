@@ -39,7 +39,91 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- FAVICON -->
   <div class="section">
     <div class="section-label">Favicon</div>
-    <p style="color:var(--text-muted);">Coming soon.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;">
+
+      <!-- Dark bg (primary use) -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:120px;height:120px;border-radius:12px;background:#002391;display:flex;align-items:center;justify-content:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:72px;height:72px;">
+            <polygon fill="#2c8cff" points="167.13 413.45 256.08 465 432.75 362.74 432.75 261.73 377.46 293.74 377.46 330.73 256.08 400.98 222.41 381.45 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 255.25 284.18 407.39 196.46 407.39 135.77 256.08 48.06 79 150.32 79 362.74 134.29 394.75 134.29 182.33 256.08 112.08 350.86 166.95 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 407.39 135.77 407.39 196.46 255.25 284.18 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="256.08 112.08 256.08 48.06 407.39 135.77 350.86 166.95 256.08 112.08"/>
+            <polygon fill="#0052e2" points="167.13 413.45 222.41 381.45 222.41 169.03 167.13 201.04 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="256.08 465 256.08 400.98 377.46 330.73 377.46 293.74 432.75 261.73 432.75 362.74 256.08 465"/>
+            <polygon fill="#0052e2" points="377.46 293.74 432.75 261.73 363.75 221.82 308.04 253.83 377.46 293.74"/>
+          </svg>
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">512×512</span>
+      </div>
+
+      <!-- Rendered sizes -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:120px;height:120px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:48px;height:48px;border-radius:8px;">
+            <rect width="512" height="512" fill="#002391"/>
+            <polygon fill="#2c8cff" points="167.13 413.45 256.08 465 432.75 362.74 432.75 261.73 377.46 293.74 377.46 330.73 256.08 400.98 222.41 381.45 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 255.25 284.18 407.39 196.46 407.39 135.77 256.08 48.06 79 150.32 79 362.74 134.29 394.75 134.29 182.33 256.08 112.08 350.86 166.95 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 407.39 135.77 407.39 196.46 255.25 284.18 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="256.08 112.08 256.08 48.06 407.39 135.77 350.86 166.95 256.08 112.08"/>
+            <polygon fill="#0052e2" points="167.13 413.45 222.41 381.45 222.41 169.03 167.13 201.04 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="256.08 465 256.08 400.98 377.46 330.73 377.46 293.74 432.75 261.73 432.75 362.74 256.08 465"/>
+            <polygon fill="#0052e2" points="377.46 293.74 432.75 261.73 363.75 221.82 308.04 253.83 377.46 293.74"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:32px;height:32px;border-radius:6px;">
+            <rect width="512" height="512" fill="#002391"/>
+            <polygon fill="#2c8cff" points="167.13 413.45 256.08 465 432.75 362.74 432.75 261.73 377.46 293.74 377.46 330.73 256.08 400.98 222.41 381.45 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 255.25 284.18 407.39 196.46 407.39 135.77 256.08 48.06 79 150.32 79 362.74 134.29 394.75 134.29 182.33 256.08 112.08 350.86 166.95 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 407.39 135.77 407.39 196.46 255.25 284.18 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="256.08 112.08 256.08 48.06 407.39 135.77 350.86 166.95 256.08 112.08"/>
+            <polygon fill="#0052e2" points="167.13 413.45 222.41 381.45 222.41 169.03 167.13 201.04 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="256.08 465 256.08 400.98 377.46 330.73 377.46 293.74 432.75 261.73 432.75 362.74 256.08 465"/>
+            <polygon fill="#0052e2" points="377.46 293.74 432.75 261.73 363.75 221.82 308.04 253.83 377.46 293.74"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:16px;height:16px;border-radius:3px;">
+            <rect width="512" height="512" fill="#002391"/>
+            <polygon fill="#2c8cff" points="167.13 413.45 256.08 465 432.75 362.74 432.75 261.73 377.46 293.74 377.46 330.73 256.08 400.98 222.41 381.45 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 255.25 284.18 407.39 196.46 407.39 135.77 256.08 48.06 79 150.32 79 362.74 134.29 394.75 134.29 182.33 256.08 112.08 350.86 166.95 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="255.25 220.16 407.39 135.77 407.39 196.46 255.25 284.18 255.25 220.16"/>
+            <polygon fill="#2c8cff" points="256.08 112.08 256.08 48.06 407.39 135.77 350.86 166.95 256.08 112.08"/>
+            <polygon fill="#0052e2" points="167.13 413.45 222.41 381.45 222.41 169.03 167.13 201.04 167.13 413.45"/>
+            <polygon fill="#2c8cff" points="256.08 465 256.08 400.98 377.46 330.73 377.46 293.74 432.75 261.73 432.75 362.74 256.08 465"/>
+            <polygon fill="#0052e2" points="377.46 293.74 432.75 261.73 363.75 221.82 308.04 253.83 377.46 293.74"/>
+          </svg>
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">48 · 32 · 16px</span>
+      </div>
+
+      <!-- Browser tab simulation -->
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:1;min-width:200px;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;width:100%;max-width:320px;">
+          <div style="background:#e8e8ea;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+            <div style="display:flex;gap:5px;">
+              <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+              <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+              <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+            </div>
+          </div>
+          <div style="padding:0;background:#f0f0f2;">
+            <div style="display:inline-flex;align-items:center;gap:6px;background:var(--surface);border-radius:6px 6px 0 0;padding:7px 14px 7px 10px;margin:6px 0 0 8px;border:1px solid var(--border);border-bottom:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:14px;height:14px;border-radius:2px;flex-shrink:0;">
+                <rect width="512" height="512" fill="#002391"/>
+                <polygon fill="#2c8cff" points="167.13 413.45 256.08 465 432.75 362.74 432.75 261.73 377.46 293.74 377.46 330.73 256.08 400.98 222.41 381.45 167.13 413.45"/>
+                <polygon fill="#2c8cff" points="255.25 220.16 255.25 284.18 407.39 196.46 407.39 135.77 256.08 48.06 79 150.32 79 362.74 134.29 394.75 134.29 182.33 256.08 112.08 350.86 166.95 255.25 220.16"/>
+                <polygon fill="#2c8cff" points="255.25 220.16 407.39 135.77 407.39 196.46 255.25 284.18 255.25 220.16"/>
+                <polygon fill="#2c8cff" points="256.08 112.08 256.08 48.06 407.39 135.77 350.86 166.95 256.08 112.08"/>
+                <polygon fill="#0052e2" points="167.13 413.45 222.41 381.45 222.41 169.03 167.13 201.04 167.13 413.45"/>
+                <polygon fill="#2c8cff" points="256.08 465 256.08 400.98 377.46 330.73 377.46 293.74 432.75 261.73 432.75 362.74 256.08 465"/>
+                <polygon fill="#0052e2" points="377.46 293.74 432.75 261.73 363.75 221.82 308.04 253.83 377.46 293.74"/>
+              </svg>
+              <span style="font-size:11px;color:var(--text);font-weight:500;white-space:nowrap;">Blueprint Brand Guidelines</span>
+            </div>
+          </div>
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Browser tab</span>
+      </div>
+
+    </div>
   </div>
 
   <!-- COLORS -->
