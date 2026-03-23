@@ -1,5 +1,9 @@
 ---
 import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BrandLayout
@@ -7,10 +11,138 @@ import BrandLayout from '../layouts/BrandLayout.astro';
   eyebrow="Events"
 >
 
+  <!-- LOGOS -->
   <div class="section">
     <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <img src={`${base}/assets/images/Blueprint_Logo_Horiz.svg`} style="width:82%;height:auto;" alt="Blueprint horizontal" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <img src={`${base}/assets/images/Blueprint_Logo_Horiz_Rev.svg`} style="width:82%;height:auto;" alt="Blueprint horizontal reversed" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Vertical</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/Blueprint_Logo_Vert.svg`} style="width:50%;height:auto;" alt="Blueprint vertical" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <img src={`${base}/assets/images/Blueprint_Logo_Vert_rev.svg`} style="width:50%;height:auto;" alt="Blueprint vertical reversed" />
+      </LogoTile>
+    </LogoGrid>
+  </div>
+
+  <!-- FAVICON -->
+  <div class="section">
+    <div class="section-label">Favicon</div>
     <p style="color:var(--text-muted);">Coming soon.</p>
   </div>
 
+  <!-- COLORS -->
+  <div class="section">
+    <div class="section-label">Colors</div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#002391;"></div>
+        <div class="color-info">
+          <div class="color-name">Dark Blue</div>
+          <div class="color-values">Hex: #002391<br>RGB: 0, 35, 145<br>CMYK: 100, 76, 0, 43<br>HSB: 225.52, 100, 56.86</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0052e2;"></div>
+        <div class="color-info">
+          <div class="color-name">Medium Blue</div>
+          <div class="color-values">Hex: #0052e2<br>RGB: 0, 82, 226<br>CMYK: 100, 64, 0, 11<br>HSB: 218.23, 100, 88.63</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#2c8cff;"></div>
+        <div class="color-info">
+          <div class="color-name">Light Blue</div>
+          <div class="color-values">Hex: #2c8cff<br>RGB: 44, 140, 255<br>CMYK: 83, 45, 0, 0<br>HSB: 212.70, 82.75, 100</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY — PRIMARY -->
+  <div class="section">
+    <div class="section-label">Primary typeface</div>
+
+    <div class="type-block">
+      <div class="type-block-label">Display — Font TBD Bold</div>
+      <div class="type-specimen">
+        <div class="specimen-display" style="font-weight:700;">The future of<br>real estate.</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-block-label">Weights</div>
+      <div class="type-specimen">
+        <div class="specimen-weights">
+          <div class="weight-item"><div class="weight-char" style="font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-weight:600;">Aa</div><div class="weight-label">SemiBold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-block-label">Body — Font TBD Regular</div>
+      <div class="type-specimen">
+        <div class="specimen-body">Blueprint is the premier real estate technology conference bringing together innovators, leaders, and visionaries shaping the future of the industry.<br><br><strong>Semibold for emphasis.</strong> Always pair display type with adequate white space to let headings breathe.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY — SECONDARY -->
+  <div class="section">
+    <div class="section-label">Secondary typeface</div>
+
+    <div class="type-block">
+      <div class="type-block-label">Display — Font TBD Bold</div>
+      <div class="type-specimen">
+        <div class="specimen-display" style="font-weight:700;font-style:italic;">The future of<br>real estate.</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-block-label">Weights</div>
+      <div class="type-specimen">
+        <div class="specimen-weights">
+          <div class="weight-item"><div class="weight-char" style="font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY — IMPACT -->
+  <div class="section">
+    <div class="section-label">Impact typeface</div>
+
+    <div class="type-block">
+      <div class="type-block-label">Display — Font TBD Bold</div>
+      <div class="type-specimen">
+        <div class="specimen-display" style="font-weight:700;text-transform:uppercase;">The future of<br>real estate.</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-block-label">Weights</div>
+      <div class="type-specimen">
+        <div class="specimen-weights">
+          <div class="weight-item"><div class="weight-char" style="font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </BrandLayout>
