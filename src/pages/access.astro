@@ -2,6 +2,7 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
 import InmanAccessHorizontal from '../components/logos/InmanAccessHorizontal.astro';
 import InmanAccessStacked from '../components/logos/InmanAccessStacked.astro';
 import AccessIcon from '../components/logos/AccessIcon.astro';
@@ -47,7 +48,11 @@ import AccessIcon from '../components/logos/AccessIcon.astro';
       <LogoTile bg="blue" tall>
         <InmanAccessStacked fill="#fff" dotFill="#fff" />
       </LogoTile>
-    </LogoGrid>  </div>
+    </LogoGrid>
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Inman_Access_Logos.zip" label="Download Access Logos" />
+    </div>
+  </div>
 
   <!-- ICONS -->
   <div class="section">
