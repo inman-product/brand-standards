@@ -3,6 +3,8 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
+import InmanAwardsHorizontal from '../components/logos/InmanAwardsHorizontal.astro';
+import InmanAwardsStacked from '../components/logos/InmanAwardsStacked.astro';
 ---
 
 <BrandLayout
@@ -10,12 +12,38 @@ import DownloadBtn from '../components/DownloadBtn.astro';
   eyebrow="Products"
 >
   <div class="section">
-    <div class="section-label">Primary mark</div>
+    <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <InmanAwardsHorizontal fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light">
+        <InmanAwardsHorizontal fill="#231f20" dotFill="#231f20" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <InmanAwardsHorizontal fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue">
+        <InmanAwardsHorizontal fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Stacked</div>
     <LogoGrid>
-      <LogoTile bg="light" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
-      <LogoTile bg="light" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
-      <LogoTile bg="dark" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
-      <LogoTile bg="blue" style="height:120px;"><div class="coming-soon-badge">SVG pending</div></LogoTile>
+      <LogoTile bg="light" tall>
+        <InmanAwardsStacked fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light" tall>
+        <InmanAwardsStacked fill="#231f20" dotFill="#231f20" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <InmanAwardsStacked fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue" tall>
+        <InmanAwardsStacked fill="#fff" dotFill="#fff" />
+      </LogoTile>
     </LogoGrid>
     <div class="btn-row">
       <DownloadBtn href="/assets/downloads/Inman_Awards_Logo.zip" label="Download Awards Logos" />
