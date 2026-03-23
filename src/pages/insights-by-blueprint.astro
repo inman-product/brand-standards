@@ -1,5 +1,9 @@
 ---
 import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BrandLayout
@@ -9,7 +13,26 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 
   <div class="section">
     <div class="section-label">Logos</div>
-    <p style="color:var(--text-muted);">Coming soon.</p>
+
+    <div class="logo-subsection-label">Primary</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <img src={`${base}/assets/images/Insights.svg`} style="width:82%;height:auto;" alt="Insights By Blueprint" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <img src={`${base}/assets/images/Insights_rev.svg`} style="width:82%;height:auto;" alt="Insights By Blueprint reversed" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">With tagline</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/Insights_tag.svg`} style="width:82%;height:auto;" alt="Insights By Blueprint with tagline" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <img src={`${base}/assets/images/Insights_tag_rev.svg`} style="width:82%;height:auto;" alt="Insights By Blueprint with tagline reversed" />
+      </LogoTile>
+    </LogoGrid>
   </div>
 
   <!-- FAVICON -->
