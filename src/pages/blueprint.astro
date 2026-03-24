@@ -2,6 +2,7 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -34,6 +35,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <img src={`${base}/assets/images/Blueprint_Logo_Vert_rev.svg`} style="width:50%;height:auto;" alt="Blueprint vertical reversed" />
       </LogoTile>
     </LogoGrid>
+
+    <div class="btn-row" style="margin-top:20px;">
+      <DownloadBtn href="/assets/downloads/Blueprint_Logos.zip" label="Download Blueprint Logos" />
+    </div>
   </div>
 
   <!-- FAVICON -->

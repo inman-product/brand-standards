@@ -2,6 +2,7 @@
 import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -43,6 +44,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <img src={`${base}/assets/images/Insights_tag_rev.svg`} style="width:82%;height:auto;" alt="Insights By Blueprint with tagline reversed" />
       </LogoTile>
     </LogoGrid>
+
+    <div class="btn-row" style="margin-top:20px;">
+      <DownloadBtn href="/assets/downloads/Insights_By_Blueprint_Logos.zip" label="Download Insights Logos" />
+    </div>
   </div>
 
   <!-- FAVICON -->
