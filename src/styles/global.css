@@ -54,6 +54,104 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-Extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CA Saygon Text';
+  src: url('/assets/fonts/CASaygonText-ExtraboldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
