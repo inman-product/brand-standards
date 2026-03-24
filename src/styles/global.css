@@ -194,6 +194,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'PP Monument Normal';
+  src: url('/assets/fonts/PPMonumentNormal-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
