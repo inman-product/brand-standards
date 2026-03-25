@@ -3,8 +3,8 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import OnTourNashville from '../components/logos/OnTourNashville.astro';
+import OnTourNashvilleStacked from '../components/logos/OnTourNashvilleStacked.astro';
 ---
 
 <BrandLayout
@@ -13,16 +13,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 >
   <div class="section">
     <div class="section-label">Logos</div>
-    <LogoGrid>
-      <LogoTile bg="light" tall>
-        <img src={`${base}/assets/images/web_logo_o_date.png`} style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville" />
-      </LogoTile>
-      <LogoTile bg="dark" tall>
-        <img src={`${base}/assets/images/IOTN26_white_02.png`} style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville white" />
-      </LogoTile>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light"><OnTourNashville fill="#161a48" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="light"><OnTourNashville fill="#1a1a1a" dotFill="#1a1a1a" /></LogoTile>
+      <LogoTile bg="dark"><OnTourNashville fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="blue"><OnTourNashville fill="#ffffff" dotFill="#ffffff" /></LogoTile>
     </LogoGrid>
 
-    <div class="btn-row">
+    <div class="logo-subsection-label">Stacked</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall><OnTourNashvilleStacked fill="#161a48" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="light" tall><OnTourNashvilleStacked fill="#1a1a1a" dotFill="#1a1a1a" /></LogoTile>
+      <LogoTile bg="dark" tall><OnTourNashvilleStacked fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="blue" tall><OnTourNashvilleStacked fill="#ffffff" dotFill="#ffffff" /></LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row" style="margin-top:20px;">
       <DownloadBtn href="/assets/downloads/On_Tour_Nashville_Logos.zip" label="Download On Tour Nashville Logos" />
     </div>
   </div>
