@@ -3,6 +3,7 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
+import ThemePanel from '../components/ThemePanel.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -291,10 +292,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- DEV GUIDE -->
   <div class="section">
     <div class="section-label">Developer guide</div>
-    <p style="color:var(--text-secondary);margin-bottom:16px;">Markdown cheat sheet with CSS variables, font stacks, and color tokens for developers.</p>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/Blueprint_Dev_Guide.md" label="Download Dev Guide (.md)" />
-    </div>
+    <ThemePanel
+      brandName="Blueprint"
+      colors={[
+        { name: 'Midnight', hex: '#00015D', role: 'Primary' },
+        { name: 'Cobalt', hex: '#002ef6', role: 'Secondary' },
+        { name: 'Azure', hex: '#54B9FF', role: 'Tertiary' },
+        { name: 'Lemon', hex: '#fee759', role: 'Accent' },
+        { name: 'Cherry', hex: '#e63951', role: 'Accent' },
+        { name: 'Prince', hex: '#9B2FAE', role: 'Accent' },
+        { name: 'Onyx', hex: '#0F0F0F', role: 'Neutral' },
+        { name: 'White', hex: '#FFFFFF', role: 'Neutral' },
+      ]}
+      fonts={[
+        { name: 'CA Saygon Text', role: 'Headline' },
+        { name: 'Helvetica Neue', role: 'Body' },
+      ]}
+      downloadHref="/assets/downloads/Blueprint_Dev_Guide.md"
+    />
   </div>
 
 </BrandLayout>

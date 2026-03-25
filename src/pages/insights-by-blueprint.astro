@@ -3,6 +3,7 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
+import ThemePanel from '../components/ThemePanel.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
@@ -250,10 +251,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- DEV GUIDE -->
   <div class="section">
     <div class="section-label">Developer guide</div>
-    <p style="color:var(--text-secondary);margin-bottom:16px;">Markdown cheat sheet with CSS variables, font stacks, and color tokens for developers.</p>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/Insights_Dev_Guide.md" label="Download Dev Guide (.md)" />
-    </div>
+    <ThemePanel
+      brandName="Insights By Blueprint"
+      colors={[
+        { name: 'Dark Blue', hex: '#021b96', role: 'Primary' },
+        { name: 'Bright Blue', hex: '#0089ff', role: 'Secondary' },
+        { name: 'Electric Blue', hex: '#1c00ff', role: 'Accent' },
+        { name: 'Rose', hex: '#ce415f', role: 'Accent' },
+      ]}
+      fonts={[
+        { name: 'PP Editorial New', role: 'Headline' },
+        { name: 'Inter', role: 'Body' },
+        { name: 'PP Monument Normal', role: 'Impact' },
+      ]}
+      downloadHref="/assets/downloads/Insights_Dev_Guide.md"
+    />
   </div>
 
 </BrandLayout>

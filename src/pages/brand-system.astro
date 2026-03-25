@@ -3,6 +3,7 @@ import BrandLayout from '../layouts/BrandLayout.astro';
 import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
+import ThemePanel from '../components/ThemePanel.astro';
 ---
 
 <BrandLayout title="Brand system" eyebrow="Foundation">
@@ -256,10 +257,21 @@ import DownloadBtn from '../components/DownloadBtn.astro';
   <!-- DEV GUIDE -->
   <div class="section">
     <div class="section-label">Developer guide</div>
-    <p style="color:var(--text-secondary);margin-bottom:16px;">Markdown cheat sheet with CSS variables, font stacks, and color tokens for developers.</p>
-    <div class="btn-row">
-      <DownloadBtn href="/assets/downloads/Inman_Dev_Guide.md" label="Download Dev Guide (.md)" />
-    </div>
+    <ThemePanel
+      brandName="Inman"
+      colors={[
+        { name: 'Bright Blue', hex: '#0a84ff', role: 'Primary' },
+        { name: 'Dark Blue', hex: '#161a48', role: 'Secondary' },
+        { name: 'Red', hex: '#ff0a0a', role: 'Accent' },
+      ]}
+      fonts={[
+        { name: 'HEX Franklin', role: 'Headline' },
+        { name: 'HEX Franklin', role: 'Body' },
+        { name: 'Harriet Display', role: 'Editorial' },
+        { name: 'Tungsten', role: 'Impact' },
+      ]}
+      downloadHref="/assets/downloads/Inman_Dev_Guide.md"
+    />
   </div>
 
 </BrandLayout>

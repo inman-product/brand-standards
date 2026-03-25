@@ -1,67 +1,93 @@
 ---
 export interface Props {
   brandName: string;
-  mode?: 'light' | 'dark';
   colors: { name: string; hex: string; role: string }[];
   fonts: { name: string; role: string }[];
   downloadHref: string;
 }
 
-const { brandName, mode = 'light', colors, fonts, downloadHref } = Astro.props;
+const { brandName, colors, fonts, downloadHref } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<div class="theme-panel">
+<div class="theme-panel" data-tp>
   <div class="tp-header">
     <div class="tp-title">{brandName}</div>
   </div>
 
-  <!-- Mode -->
-  <div class="tp-section-label">Mode</div>
-  <div class="tp-toggle-row">
-    <div class={`tp-toggle-btn ${mode === 'light' ? 'active' : ''}`}>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      Light
-    </div>
-    <div class={`tp-toggle-btn ${mode === 'dark' ? 'active' : ''}`}>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      Dark
-    </div>
-  </div>
-
-  <!-- Colors -->
-  <div class="tp-section-label">Color Palette</div>
-  {colors.map(c => (
-    <div class="tp-color-row">
-      <div class="tp-color-dot" style={`background:${c.hex};`}></div>
-      <div class="tp-color-info">
-        <div class="tp-color-name">{c.name}</div>
-        <div class="tp-color-role">{c.role}</div>
+  <div class="tp-grid">
+    <div class="tp-col">
+      <!-- Mode -->
+      <div class="tp-section-label">Mode</div>
+      <div class="tp-toggle-row">
+        <div class="tp-toggle-btn" data-tp-light>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          Light
+        </div>
+        <div class="tp-toggle-btn" data-tp-dark>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          Dark
+        </div>
       </div>
-      <div class="tp-color-hex">{c.hex}</div>
-    </div>
-  ))}
 
-  <!-- Fonts -->
-  <div class="tp-section-label">Font</div>
-  {fonts.map(f => (
-    <div class="tp-font-row">
-      <div class="tp-font-icon">Aa</div>
-      <div class="tp-font-info">
-        <div class="tp-font-name">{f.name}</div>
-        <div class="tp-font-role">{f.role}</div>
+      <!-- Colors -->
+      <div class="tp-section-label">Color Palette</div>
+      {colors.map(c => (
+        <div class="tp-color-row">
+          <div class="tp-color-dot" style={`background:${c.hex};`}></div>
+          <div class="tp-color-info">
+            <div class="tp-color-name">{c.name}</div>
+            <div class="tp-color-role">{c.role}</div>
+          </div>
+          <div class="tp-color-hex">{c.hex}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="tp-col">
+      <!-- Fonts -->
+      <div class="tp-section-label">Font</div>
+      {fonts.map(f => (
+        <div class="tp-font-row">
+          <div class="tp-font-icon">Aa</div>
+          <div class="tp-font-info">
+            <div class="tp-font-name">{f.name}</div>
+            <div class="tp-font-role">{f.role}</div>
+          </div>
+        </div>
+      ))}
+
+      <!-- Download -->
+      <div class="tp-download">
+        <a href={`${base}${downloadHref}`} class="tp-download-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Dev Guide (.md)
+        </a>
       </div>
     </div>
-  ))}
-
-  <!-- Download -->
-  <div class="tp-download">
-    <a href={`${base}${downloadHref}`} class="tp-download-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download Dev Guide (.md)
-    </a>
   </div>
 </div>
+
+<script>
+  function syncThemePanels() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.querySelectorAll('[data-tp]').forEach(panel => {
+      const lightBtn = panel.querySelector('[data-tp-light]');
+      const darkBtn = panel.querySelector('[data-tp-dark]');
+      if (lightBtn && darkBtn) {
+        lightBtn.classList.toggle('active', !isDark);
+        darkBtn.classList.toggle('active', isDark);
+      }
+    });
+  }
+
+  // Sync on load
+  syncThemePanels();
+
+  // Watch for theme changes
+  const observer = new MutationObserver(syncThemePanels);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
 
 <style>
   .theme-panel {
@@ -69,11 +95,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 24px;
-    max-width: 340px;
   }
 
   .tp-header {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
+  }
+
+  .tp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 640px) {
+    .tp-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
   }
 
   .tp-title {
@@ -111,6 +149,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     font-weight: 500;
     color: var(--text-muted);
     cursor: default;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   }
 
   .tp-toggle-btn.active {

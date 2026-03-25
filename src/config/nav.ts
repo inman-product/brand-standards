@@ -40,12 +40,4 @@ export const nav: NavGroup[] = [
       },
     ],
   },
-  {
-    group: 'Developer',
-    items: [
-      { label: 'Inman Dev Guide',      href: '/dev-guide-inman' },
-      { label: 'Blueprint Dev Guide',   href: '/dev-guide-blueprint' },
-      { label: 'Insights Dev Guide',    href: '/dev-guide-insights' },
-    ],
-  },
 ];
