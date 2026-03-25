@@ -4,6 +4,8 @@ import LogoGrid from '../components/LogoGrid.astro';
 import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
 import OnTourTexas from '../components/logos/OnTourTexas.astro';
+import OnTourTexasHorizontal from '../components/logos/OnTourTexasHorizontal.astro';
+import OnTourTexasStacked from '../components/logos/OnTourTexasStacked.astro';
 ---
 
 <BrandLayout
@@ -12,14 +14,32 @@ import OnTourTexas from '../components/logos/OnTourTexas.astro';
 >
   <div class="section">
     <div class="section-label">Logos</div>
-    <LogoGrid>
+
+    <div class="logo-subsection-label">Primary</div>
+    <LogoGrid style="margin-bottom:16px;">
       <LogoTile bg="light" tall><OnTourTexas fill="#161a48" dotFill="#0a84ff" /></LogoTile>
       <LogoTile bg="light" tall><OnTourTexas fill="#1a1a1a" dotFill="#1a1a1a" /></LogoTile>
       <LogoTile bg="dark" tall><OnTourTexas fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
       <LogoTile bg="blue" tall><OnTourTexas fill="#ffffff" dotFill="#ffffff" /></LogoTile>
     </LogoGrid>
 
-    <div class="btn-row">
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light"><OnTourTexasHorizontal fill="#161a48" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="light"><OnTourTexasHorizontal fill="#1a1a1a" dotFill="#1a1a1a" /></LogoTile>
+      <LogoTile bg="dark"><OnTourTexasHorizontal fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="blue"><OnTourTexasHorizontal fill="#ffffff" dotFill="#ffffff" /></LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Stacked</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall><OnTourTexasStacked fill="#161a48" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="light" tall><OnTourTexasStacked fill="#1a1a1a" dotFill="#1a1a1a" /></LogoTile>
+      <LogoTile bg="dark" tall><OnTourTexasStacked fill="#ffffff" dotFill="#0a84ff" /></LogoTile>
+      <LogoTile bg="blue" tall><OnTourTexasStacked fill="#ffffff" dotFill="#ffffff" /></LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row" style="margin-top:20px;">
       <DownloadBtn href="/assets/downloads/On_Tour_Texas_Logos.zip" label="Download On Tour Texas Logos" />
     </div>
   </div>
