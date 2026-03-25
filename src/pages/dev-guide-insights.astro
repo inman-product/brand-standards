@@ -1,0 +1,28 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import ThemePanel from '../components/ThemePanel.astro';
+---
+
+<BrandLayout
+  title="Developer Guide"
+  eyebrow="Insights By Blueprint"
+>
+  <div class="section">
+    <ThemePanel
+      brandName="Insights By Blueprint"
+      mode="light"
+      colors={[
+        { name: 'Dark Blue', hex: '#021b96', role: 'Primary' },
+        { name: 'Bright Blue', hex: '#0089ff', role: 'Secondary' },
+        { name: 'Electric Blue', hex: '#1c00ff', role: 'Accent' },
+        { name: 'Rose', hex: '#ce415f', role: 'Accent' },
+      ]}
+      fonts={[
+        { name: 'PP Editorial New', role: 'Headline' },
+        { name: 'Inter', role: 'Body' },
+        { name: 'PP Monument Normal', role: 'Impact' },
+      ]}
+      downloadHref="/assets/downloads/Insights_Dev_Guide.md"
+    />
+  </div>
+</BrandLayout>

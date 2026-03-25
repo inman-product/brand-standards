@@ -198,6 +198,92 @@
   margin-bottom: 16px;
 }
 
+/* ── DEV GUIDE ── */
+.dev-guide p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.dev-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 24px 0 8px;
+}
+
+.dev-heading:first-child { margin-top: 0; }
+
+.dev-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.dev-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+.dev-table td {
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.dev-table code {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.dev-guide pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.dev-guide pre code {
+  font-size: 12.5px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: var(--text);
+  line-height: 1.7;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.dev-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.dev-list code {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
 /* ── RESPONSIVE — TABLET (≤900px) ── */
 @media (max-width: 900px) {
   .color-grid { grid-template-columns: 1fr 1fr; }
