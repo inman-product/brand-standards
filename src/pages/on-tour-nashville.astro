@@ -5,6 +5,8 @@ import LogoTile from '../components/LogoTile.astro';
 import DownloadBtn from '../components/DownloadBtn.astro';
 import OnTourNashville from '../components/logos/OnTourNashville.astro';
 import OnTourNashvilleStacked from '../components/logos/OnTourNashvilleStacked.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BrandLayout
@@ -13,6 +15,16 @@ import OnTourNashvilleStacked from '../components/logos/OnTourNashvilleStacked.a
 >
   <div class="section">
     <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Event logo</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/web_logo_o_date.png`} style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <img src={`${base}/assets/images/IOTN26_white_02.png`} style="width:82%;height:auto;display:block;" alt="Inman On Tour Nashville white" />
+      </LogoTile>
+    </LogoGrid>
 
     <div class="logo-subsection-label">Horizontal</div>
     <LogoGrid style="margin-bottom:16px;">
