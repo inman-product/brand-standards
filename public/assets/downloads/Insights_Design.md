@@ -73,6 +73,12 @@ The overall mood is **editorial and cerebral**, evoking the measured confidence 
 
 ## 4. Component Stylings
 
+### Corner Radius
+- **Buttons:** 0px — sharp, precise corners conveying directness and analytical clarity
+- **Cards & Containers:** 0px — clean, architectural edges matching the editorial tone
+- **Form Inputs:** 8px — subtle modern rounding for approachability on interactive elements
+- **Search Input:** 8px — matches form input rounding
+
 ### Buttons
 - **Primary CTA:** Electric Blue (#1c00ff) background, Near-Black text, sharp corners (0px border-radius), padding calc(0.667em + 2px) vertical / calc(1.333em + 2px) horizontal. Inter Medium (500). Precise and direct — no softening.
 - **Hover State:** Background inverts to Near-Black, text transitions to White. Sharp, decisive state change.

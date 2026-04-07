@@ -67,6 +67,12 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 ## 4. Component Stylings
 
+### Corner Radius
+- **Buttons:** 9999px — fully rounded pill shape, bold and modern
+- **Cards & Containers:** 12px — gently rounded, refined edges
+- **Form Inputs:** 8px — clean, modern rounding
+- **Image Containers:** 12px — matches card rounding, images clip to rounded edges
+
 ### Buttons
 - **Primary CTA:** Cobalt (#002ef6) background, White text, 12px vertical / 24px horizontal padding, 9999px border-radius (fully rounded pill shape). CA Saygon Text SemiBold.
 - **Secondary CTA:** 2px Cobalt border, transparent background, Cobalt text. Same pill shape. Hover fills with Cobalt background, text transitions to White.

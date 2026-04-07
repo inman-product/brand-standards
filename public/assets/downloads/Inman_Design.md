@@ -68,6 +68,13 @@ The overall mood is **professional yet modern**, grounded in a deep navy foundat
 
 ## 4. Component Stylings
 
+### Corner Radius
+- **Standard Button:** 9px — subtle rounding, approachable without being playful
+- **Pill Button:** 9999px — fully rounded ends for navigation actions and filters
+- **Cards & Containers:** 0px — sharp edges for editorial precision
+- **Submenus:** 0px — clean, architectural dropdown panels
+- **Form Inputs:** 0px — sharp, compact fields matching the editorial tone
+
 ### Buttons
 - **Primary CTA:** Inman Red (#da3832) background, white text, 9px vertical / 12px horizontal padding, 9px border-radius. Hover transitions to white background with blue text over 0.3s ease.
 - **Submit Button:** Inman Blue (#0a84ff) background, white text, 40px height, full width. Hover darkens to #007bb3.
@@ -75,7 +82,7 @@ The overall mood is **professional yet modern**, grounded in a deep navy foundat
 - **Hover/Focus:** 0.3s ease transition on background and color. Focus ring uses primary blue outline for keyboard accessibility.
 
 ### Cards & Content Blocks
-- **Bordered Block:** 1px #ddd border, white background, 20px padding on headers, 10–15px internal post padding. Clean, structured containers for content groups.
+- **Bordered Block:** 1px #ddd border, white background, 0px border-radius, 20px padding on headers, 10–15px internal post padding. Clean, structured containers for content groups.
 - **Sponsored Card:** #f6faff light blue background, 11px uppercase label in Inman Blue (#0a84ff). Subtle differentiation without disruption.
 - **News Post Card:** Headline (SemiBold), byline (gray meta text), optional 16:9 thumbnail. Hover underlines headline link.
 - **Shadow Strategy:** Flat by default. Natural shadow (6px 6px 9px rgba(0,0,0,0.2)) available for elevated components like modals and dropdowns.
