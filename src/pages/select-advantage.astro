@@ -1,0 +1,76 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
+import InmanSelectAdvantageHorizontal from '../components/logos/InmanSelectAdvantageHorizontal.astro';
+import InmanSelectAdvantageStacked from '../components/logos/InmanSelectAdvantageStacked.astro';
+import SelectAdvantageIcon from '../components/logos/SelectAdvantageIcon.astro';
+---
+
+<BrandLayout
+  title="Inman Select Advantage"
+  eyebrow="Products"
+>
+
+  <!-- LOGOS -->
+  <div class="section">
+    <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <InmanSelectAdvantageHorizontal fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light">
+        <InmanSelectAdvantageHorizontal fill="#000" dotFill="#000" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <InmanSelectAdvantageHorizontal fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue">
+        <InmanSelectAdvantageHorizontal fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Stacked</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall>
+        <InmanSelectAdvantageStacked fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light" tall>
+        <InmanSelectAdvantageStacked fill="#000" dotFill="#000" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <InmanSelectAdvantageStacked fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue" tall>
+        <InmanSelectAdvantageStacked fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Inman_Select_Advantage_Logo.zip" label="Download Select Advantage Logos" />
+    </div>
+  </div>
+
+  <!-- ICON -->
+  <div class="section">
+    <div class="section-label">Favicon</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <SelectAdvantageIcon fill="#161a48" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Light</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+          <SelectAdvantageIcon fill="#fff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Dark</span>
+      </div>
+    </div>
+  </div>
+
+</BrandLayout>

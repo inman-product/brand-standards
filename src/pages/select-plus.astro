@@ -1,0 +1,76 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
+import InmanSelectPlusHorizontal from '../components/logos/InmanSelectPlusHorizontal.astro';
+import InmanSelectPlusStacked from '../components/logos/InmanSelectPlusStacked.astro';
+import SelectPlusIcon from '../components/logos/SelectPlusIcon.astro';
+---
+
+<BrandLayout
+  title="Inman Select Plus"
+  eyebrow="Products"
+>
+
+  <!-- LOGOS -->
+  <div class="section">
+    <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <InmanSelectPlusHorizontal fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light">
+        <InmanSelectPlusHorizontal fill="#000" dotFill="#000" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <InmanSelectPlusHorizontal fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue">
+        <InmanSelectPlusHorizontal fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Stacked</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall>
+        <InmanSelectPlusStacked fill="#161a48" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="light" tall>
+        <InmanSelectPlusStacked fill="#000" dotFill="#000" />
+      </LogoTile>
+      <LogoTile bg="dark" tall>
+        <InmanSelectPlusStacked fill="#fff" dotFill="#0a84ff" />
+      </LogoTile>
+      <LogoTile bg="blue" tall>
+        <InmanSelectPlusStacked fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Inman_Select_Plus_Logo.zip" label="Download Select Plus Logos" />
+    </div>
+  </div>
+
+  <!-- ICON -->
+  <div class="section">
+    <div class="section-label">Favicon</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
+          <SelectPlusIcon fill="#161a48" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Light</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div style="width:100px;height:100px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+          <SelectPlusIcon fill="#fff" dotFill="#0a84ff" />
+        </div>
+        <span style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.04em;">Dark</span>
+      </div>
+    </div>
+  </div>
+
+</BrandLayout>

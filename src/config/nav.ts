@@ -17,10 +17,12 @@ export const nav: NavGroup[] = [
   {
     group: 'Products',
     items: [
-      { label: 'Select',  href: '/select' },
-      { label: 'Access',  href: '/access' },
-      { label: 'Intel',   href: '/intel' },
-      { label: 'Awards',  href: '/awards' },
+      // 'Select', 'Access', and 'Intel' are being sunsetted — pages kept in place
+      // (still reachable directly), just hidden from nav.
+      { label: 'Select Plus',       href: '/select-plus' },
+      { label: 'Select Advantage',  href: '/select-advantage' },
+      { label: 'Awards',            href: '/awards' },
+      { label: 'CEO Connect',       href: '/ceo-connect' },
       {
         label: 'Insights By Blueprint',
         href: '/insights-by-blueprint',
