@@ -1,6 +1,7 @@
 export type NavItem =
   | { label: string; href: string }
-  | { label: string; href: string; sub: { label: string; href: string }[] };
+  | { label: string; href: string; sub: { label: string; href: string }[] }
+  | { label: string; sub: { label: string; href: string }[] };
 
 export type NavGroup = {
   group: string;
@@ -17,8 +18,6 @@ export const nav: NavGroup[] = [
   {
     group: 'Products',
     items: [
-      // 'Select', 'Access', and 'Intel' are being sunsetted — pages kept in place
-      // (still reachable directly), just hidden from nav.
       { label: 'Select Plus',       href: '/select-plus' },
       { label: 'Select Advantage',  href: '/select-advantage' },
       { label: 'Awards',            href: '/awards' },
@@ -26,6 +25,14 @@ export const nav: NavGroup[] = [
       {
         label: 'Insights By Blueprint',
         href: '/insights-by-blueprint',
+      },
+      {
+        label: 'Legacy Products',
+        sub: [
+          { label: 'Select',  href: '/select' },
+          { label: 'Access',  href: '/access' },
+          { label: 'Intel',   href: '/intel' },
+        ],
       },
       {
         label: 'Events',

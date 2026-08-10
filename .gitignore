@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Local images
 /unzipped-images/
+
+# Personal scratch notes
+/notes/
