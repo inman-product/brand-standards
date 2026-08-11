@@ -19,6 +19,7 @@ export const nav: NavGroup[] = [
     group: 'Products',
     items: [
       { label: 'Awards',            href: '/awards' },
+      { label: 'Insights By Blueprint', href: '/insights-by-blueprint' },
       { label: 'Select Advantage',  href: '/select-advantage' },
       { label: 'Select Plus',       href: '/select-plus' },
       {
@@ -43,7 +44,6 @@ export const nav: NavGroup[] = [
           { label: 'Connect',            href: '/connect' },
           { label: 'Connect New York',   href: '/connect-new-york' },
           { label: 'Connect San Diego',  href: '/connect-san-diego' },
-          { label: 'Insights By Blueprint', href: '/insights-by-blueprint' },
           { label: 'Luxury Connect',     href: '/luxury-connect' },
           { label: 'On Tour — Nashville', href: '/on-tour-nashville' },
           { label: 'On Tour — Texas',    href: '/on-tour-texas' },
