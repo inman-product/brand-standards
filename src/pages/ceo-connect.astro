@@ -1,0 +1,39 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
+import InmanCEOConnectHorizontal from '../components/logos/InmanCEOConnectHorizontal.astro';
+---
+
+<BrandLayout
+  title="Inman CEO Connect"
+  eyebrow="Products"
+>
+
+  <!-- LOGOS -->
+  <div class="section">
+    <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid>
+      <LogoTile bg="light">
+        <InmanCEOConnectHorizontal fill="#161a48" dotFill="#0b84ff" />
+      </LogoTile>
+      <LogoTile bg="light">
+        <InmanCEOConnectHorizontal fill="#000" dotFill="#000" />
+      </LogoTile>
+      <LogoTile bg="dark">
+        <InmanCEOConnectHorizontal fill="#fff" dotFill="#0b84ff" />
+      </LogoTile>
+      <LogoTile bg="blue">
+        <InmanCEOConnectHorizontal fill="#fff" dotFill="#fff" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Inman_CEO_Connect_Logo.zip" label="Download CEO Connect Logos" />
+    </div>
+  </div>
+
+</BrandLayout>

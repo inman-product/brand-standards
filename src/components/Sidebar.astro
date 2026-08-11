@@ -49,9 +49,13 @@ function isActive(href: string) {
         {group.items.map((item) => (
           'sub' in item ? (
             <>
-              <a href={withBase(item.href)} class:list={['nav-item', { active: isActive(item.href) }]}>
-                {item.label}
-              </a>
+              {'href' in item ? (
+                <a href={withBase(item.href)} class:list={['nav-item', { active: isActive(item.href) }]}>
+                  {item.label}
+                </a>
+              ) : (
+                <div class="nav-sub-group-label">{item.label}</div>
+              )}
               <div class="nav-sub">
                 {item.sub.map((subItem) => (
                   <a href={withBase(subItem.href)} class:list={[{ active: isActive(subItem.href) }]}>
