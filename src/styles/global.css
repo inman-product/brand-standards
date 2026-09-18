@@ -201,6 +201,90 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/assets/fonts/SchibstedGrotesk-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

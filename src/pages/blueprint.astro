@@ -28,12 +28,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </LogoGrid>
 
     <div class="logo-subsection-label">Vertical</div>
-    <LogoGrid>
+    <LogoGrid style="margin-bottom:16px;">
       <LogoTile bg="light" tall>
         <img src={`${base}/assets/images/Blueprint_Logo_Vert.svg`} style="width:50%;height:auto;" alt="Blueprint vertical" />
       </LogoTile>
       <LogoTile bg="light" tall style="background:#002391;border:none;">
         <img src={`${base}/assets/images/Blueprint_Logo_Vert_rev.svg`} style="width:50%;height:auto;" alt="Blueprint vertical reversed" />
+      </LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label" style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+      <span>Powered by Inman</span>
+      <span style="font-size:12px;color:var(--text-muted);font-weight:400;letter-spacing:0;text-transform:none;">White &amp; Navy variants available in the download.</span>
+    </div>
+    <LogoGrid cols={3}>
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/Blueprint_Powered_By_Horiz_Navy.svg`} style="width:82%;height:auto;" alt="Blueprint powered by Inman horizontal" />
+      </LogoTile>
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/Blueprint_Powered_By_Vert_Navy.svg`} style="width:55%;height:auto;" alt="Blueprint powered by Inman vertical" />
+      </LogoTile>
+      <LogoTile bg="light" tall>
+        <img src={`${base}/assets/images/Blueprint_Powered_By_Icon_Navy.svg`} style="width:45%;height:auto;" alt="Blueprint powered by Inman icon" />
       </LogoTile>
     </LogoGrid>
 
@@ -214,9 +230,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="section-label">Primary typeface</div>
 
     <div class="type-block">
-      <div class="type-block-label">Display — CA Saygon Text Bold</div>
+      <div class="type-block-label">Display — Schibsted Grotesk Bold</div>
       <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'CA Saygon Text', sans-serif;font-weight:700;">The future of<br>real estate.</div>
+        <div class="specimen-display" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:700;">The future of<br>real estate.</div>
       </div>
     </div>
 
@@ -224,13 +240,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="type-block-label">Weights</div>
       <div class="type-specimen">
         <div class="specimen-weights">
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:100;">Aa</div><div class="weight-label">Thin</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:300;">Aa</div><div class="weight-label">Light</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:600;">Aa</div><div class="weight-label">SemiBold</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:800;">Aa</div><div class="weight-label">ExtraBold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:600;">Aa</div><div class="weight-label">SemiBold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:800;">Aa</div><div class="weight-label">ExtraBold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:900;">Aa</div><div class="weight-label">Black</div></div>
         </div>
       </div>
     </div>
@@ -242,9 +257,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="section-label">Body typeface</div>
 
     <div class="type-block">
-      <div class="type-block-label">Display — Helvetica Neue Bold</div>
+      <div class="type-block-label">Display — HEX Franklin Bold</div>
       <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">The future of<br>real estate.</div>
+        <div class="specimen-display" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">The future of<br>real estate.</div>
       </div>
     </div>
 
@@ -252,18 +267,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="type-block-label">Weights</div>
       <div class="type-specimen">
         <div class="specimen-weights">
-          <div class="weight-item"><div class="weight-char" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Aa</div><div class="weight-label">Light</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Aa</div><div class="weight-label">Light</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
         </div>
       </div>
     </div>
 
     <div class="type-block">
-      <div class="type-block-label">Body — Helvetica Neue Regular</div>
+      <div class="type-block-label">Body — HEX Franklin Regular</div>
       <div class="type-specimen">
-        <div class="specimen-body" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;">Blueprint is the premier real estate technology conference bringing together innovators, leaders, and visionaries shaping the future of the industry.<br><br><strong>Bold for emphasis.</strong> Always pair display type with adequate white space to let headings breathe.</div>
+        <div class="specimen-body" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;">Blueprint is the premier real estate technology conference bringing together innovators, leaders, and visionaries shaping the future of the industry.<br><br><strong>Bold for emphasis.</strong> Always pair display type with adequate white space to let headings breathe.</div>
       </div>
     </div>
   </div>
@@ -273,9 +288,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="section-label">Impact typeface</div>
 
     <div class="type-block">
-      <div class="type-block-label">Display — CA Saygon Text ExtraBold</div>
+      <div class="type-block-label">Display — Schibsted Grotesk ExtraBold</div>
       <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'CA Saygon Text', sans-serif;font-weight:800;text-transform:uppercase;">The future of<br>real estate.</div>
+        <div class="specimen-display" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:800;text-transform:uppercase;">The future of<br>real estate.</div>
       </div>
     </div>
 
@@ -283,7 +298,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="type-block-label">Weights</div>
       <div class="type-specimen">
         <div class="specimen-weights">
-          <div class="weight-item"><div class="weight-char" style="font-family:'CA Saygon Text', sans-serif;font-weight:800;">Aa</div><div class="weight-label">ExtraBold</div></div>
+          <div class="weight-item"><div class="weight-char" style="font-family:'Schibsted Grotesk', sans-serif;font-weight:800;">Aa</div><div class="weight-label">ExtraBold</div></div>
         </div>
       </div>
     </div>
@@ -305,8 +320,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         { name: 'White', hex: '#FFFFFF', role: 'Neutral' },
       ]}
       fonts={[
-        { name: 'CA Saygon Text', role: 'Headline' },
-        { name: 'Helvetica Neue', role: 'Body' },
+        { name: 'Schibsted Grotesk', role: 'Headline' },
+        { name: 'HEX Franklin', role: 'Body' },
       ]}
     >
       <DownloadBtn href="/assets/downloads/Blueprint_Design.md" label="Download design.md" />
