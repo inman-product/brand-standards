@@ -285,6 +285,23 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'GC Horizon';
+  src: url('/assets/fonts/GC Horizon.woff2') format('woff2'),
+       url('/assets/fonts/GC Horizon.woff') format('woff'),
+       url('/assets/fonts/GC Horizon.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mistrully';
+  src: url('/assets/fonts/Mistrully.woff') format('woff'),
+       url('/assets/fonts/Mistrully.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
