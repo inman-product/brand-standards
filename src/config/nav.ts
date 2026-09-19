@@ -47,6 +47,7 @@ export const nav: NavGroup[] = [
           { label: 'Luxury Connect',     href: '/luxury-connect' },
           { label: 'On Tour — Nashville', href: '/on-tour-nashville' },
           { label: 'On Tour — Texas',    href: '/on-tour-texas' },
+          { label: 'Social Summit',      href: '/social-summit' },
         ],
       },
     ],

@@ -11,7 +11,7 @@ The overall mood is **dramatic yet polished**, balancing the intensity of a tech
 - Deep midnight backgrounds creating immersive, stage-like presence
 - Vivid multi-color accent palette (lemon, cherry, prince) for dynamic energy
 - Bold, heavy-weight sans-serif headlines that command attention
-- Clean Helvetica Neue body copy for effortless readability
+- Clean HEX Franklin body copy for effortless readability
 - High contrast between dark foundations and bright interactive elements
 - Geometric precision with generous spacing
 
@@ -38,8 +38,8 @@ The overall mood is **dramatic yet polished**, balancing the intensity of a tech
 
 ## 3. Typography Rules
 
-**Headline Font Family:** CA Saygon Text
-**Character:** Contemporary geometric sans-serif with wide weight range and sharp, confident letterforms. Feels technical and authoritative — engineered for impact at large sizes while remaining legible at smaller scales.
+**Headline Font Family:** Schibsted Grotesk
+**Character:** Modern humanist grotesque with warm, confident letterforms and a full weight range. Feels editorial and contemporary — engineered for impact at large sizes while remaining approachable at smaller scales.
 
 ### Hierarchy & Weights
 - **Display Headlines (H1):** ExtraBold weight (800), 3rem (48px), line-height 1.05, letter-spacing -0.02em. Used for hero statements and major page titles. Maximum visual punch.
@@ -48,11 +48,11 @@ The overall mood is **dramatic yet polished**, balancing the intensity of a tech
 - **Supporting Headlines:** Medium weight (500), 1.125rem (18px), line-height 1.3. Tertiary headings and emphasized body text.
 - **CTA Text:** Bold weight (700), 1rem (16px), letter-spacing 0.01em. Button labels and navigation actions.
 
-**Body Font Family:** Helvetica Neue (system font stack)
-**Character:** The quintessential clean sans-serif. Neutral, professional, and universally legible. Serves as the reliable workhorse beneath the expressive headline type.
+**Body Font Family:** HEX Franklin
+**Character:** A modern take on classic Franklin Gothic — neutral, highly readable, and professional. Serves as the reliable workhorse beneath the expressive headline type.
 
 ```css
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family: 'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 ```
 
 - **Body Text:** Regular weight (400), 1rem (16px), line-height 1.6. Descriptions, session details, and general content.
@@ -74,7 +74,7 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 - **Image Containers:** 12px — matches card rounding, images clip to rounded edges
 
 ### Buttons
-- **Primary CTA:** Cobalt (#002ef6) background, White text, 12px vertical / 24px horizontal padding, 9999px border-radius (fully rounded pill shape). CA Saygon Text SemiBold.
+- **Primary CTA:** Cobalt (#002ef6) background, White text, 12px vertical / 24px horizontal padding, 9999px border-radius (fully rounded pill shape). Schibsted Grotesk SemiBold.
 - **Secondary CTA:** 2px Cobalt border, transparent background, Cobalt text. Same pill shape. Hover fills with Cobalt background, text transitions to White.
 - **Hover State:** Slight brightness increase, smooth 0.25s ease transition.
 - **Focus State:** 3px Azure (#54B9FF) outer ring for keyboard accessibility.
@@ -88,7 +88,7 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 ### Navigation
 - **Style:** Clean horizontal bar, Midnight background on dark layouts or transparent on hero sections.
-- **Menu Items:** Helvetica Neue Medium (500), 14px, White text, 24–32px spacing between items.
+- **Menu Items:** HEX Franklin Medium (500), 14px, White text, 24–32px spacing between items.
 - **Active State:** Cobalt (#002ef6) underline or text color transition, 0.2s ease.
 - **Mobile:** Hamburger icon, slide-out drawer with Midnight background.
 
@@ -146,6 +146,6 @@ Always use descriptive names with hex codes:
 - Text dark: "Onyx (#0F0F0F)"
 
 ### Component Prompts
-- "Create a speaker card with 12px rounded corners, full-bleed square headshot, speaker name in CA Saygon Text Bold, and session title in Helvetica Neue Regular"
+- "Create a speaker card with 12px rounded corners, full-bleed square headshot, speaker name in Schibsted Grotesk Bold, and session title in HEX Franklin Regular"
 - "Design a primary CTA pill button in Cobalt (#002ef6) with white text, fully rounded ends, and hover brightness transition"
-- "Build a hero section with full-bleed Midnight (#00015D) background, centered CA Saygon Text ExtraBold headline in White, and Azure (#54B9FF) subtitle accent"
+- "Build a hero section with full-bleed Midnight (#00015D) background, centered Schibsted Grotesk ExtraBold headline in White, and Azure (#54B9FF) subtitle accent"
