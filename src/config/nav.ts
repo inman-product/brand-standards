@@ -13,6 +13,7 @@ export const nav: NavGroup[] = [
     group: 'Foundation',
     items: [
       { label: 'Brand system', href: '/brand-system' },
+      { label: 'Inman Media Network', href: '/inman-media-network' },
     ],
   },
   {
@@ -45,8 +46,6 @@ export const nav: NavGroup[] = [
           { label: 'Connect New York',   href: '/connect-new-york' },
           { label: 'Connect San Diego',  href: '/connect-san-diego' },
           { label: 'Luxury Connect',     href: '/luxury-connect' },
-          { label: 'On Tour — Nashville', href: '/on-tour-nashville' },
-          { label: 'On Tour — Texas',    href: '/on-tour-texas' },
           { label: 'Social Summit',      href: '/social-summit' },
         ],
       },

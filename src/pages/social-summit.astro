@@ -6,6 +6,7 @@ import DownloadBtn from '../components/DownloadBtn.astro';
 import ThemePanel from '../components/ThemePanel.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const img = (name: string) => `${base}/assets/images/social-summit/social-summit-${name}.png`;
 ---
 
 <BrandLayout
@@ -17,16 +18,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <div class="section">
     <div class="section-label">Logos</div>
 
-    <div class="logo-subsection-label">Primary</div>
-    <LogoGrid cols={3}>
-      <LogoTile bg="light" tall>
-        <img src={`${base}/assets/images/Social_Summit_Navy.png`} style="width:82%;height:auto;" alt="Social Summit navy" />
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light">
+        <img src={img('navy')} style="max-width:82%;max-height:80%;width:auto;height:auto;" alt="Social Summit navy" />
       </LogoTile>
-      <LogoTile bg="light" tall>
-        <img src={`${base}/assets/images/Social_Summit_Pink.png`} style="width:82%;height:auto;" alt="Social Summit pink" />
+      <LogoTile bg="light" style="background:#161A48;border:none;">
+        <img src={img('white')} style="max-width:82%;max-height:80%;width:auto;height:auto;" alt="Social Summit white" />
       </LogoTile>
-      <LogoTile bg="light" tall style="background:#0a2f5c;border:none;">
-        <img src={`${base}/assets/images/Social_Summit_White.png`} style="width:82%;height:auto;" alt="Social Summit white" />
+      <LogoTile bg="light" style="background:#161A48;border:none;">
+        <img src={img('pink')} style="max-width:82%;max-height:80%;width:auto;height:auto;" alt="Social Summit pink gradient" />
+      </LogoTile>
+      <LogoTile bg="light">
+        <img src={img('navy-pink')} style="max-width:82%;max-height:80%;width:auto;height:auto;" alt="Social Summit navy and pink" />
       </LogoTile>
     </LogoGrid>
 
@@ -35,43 +38,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </div>
 
-  <!-- COLORS — PRIMARY -->
+  <!-- COLORS -->
   <div class="section">
-    <div class="section-label">Primary colors</div>
+    <div class="section-label">Colors</div>
     <div class="color-grid">
       <div class="color-card">
-        <div class="color-swatch" style="background:#0a2f5c;"></div>
+        <div class="color-swatch" style="background:#161A48;"></div>
         <div class="color-info">
-          <div class="color-name">Deep Navy</div>
-          <div class="color-values">Hex: #0a2f5c</div>
+          <div class="color-name">Navy</div>
+          <div class="color-values">Hex: #161A48</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#2c8cff;"></div>
+        <div class="color-swatch" style="background:#3E8FFA;"></div>
         <div class="color-info">
-          <div class="color-name">Sky Blue</div>
-          <div class="color-values">Hex: #2c8cff</div>
+          <div class="color-name">Blue</div>
+          <div class="color-values">Hex: #3E8FFA</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#ec1c8e;"></div>
+        <div class="color-swatch" style="background:#E47ED7;"></div>
         <div class="color-info">
-          <div class="color-name">Hot Pink</div>
-          <div class="color-values">Hex: #ec1c8e</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- COLORS — NEUTRALS -->
-  <div class="section">
-    <div class="section-label">Neutral colors</div>
-    <div class="color-grid">
-      <div class="color-card">
-        <div class="color-swatch" style="background:#0F0F0F;"></div>
-        <div class="color-info">
-          <div class="color-name">Onyx</div>
-          <div class="color-values">Hex: #0F0F0F</div>
+          <div class="color-name">Pink</div>
+          <div class="color-values">Hex: #E47ED7</div>
         </div>
       </div>
       <div class="color-card">
@@ -84,77 +73,43 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </div>
 
-  <!-- TYPOGRAPHY — DISPLAY -->
+  <!-- TYPOGRAPHY -->
   <div class="section">
-    <div class="section-label">Display typeface</div>
+    <div class="section-label">Typefaces</div>
 
     <div class="type-block">
-      <div class="type-block-label">Display — GC Horizon</div>
+      <div class="type-block-label">Headline — GC Horizon Bold Condensed</div>
       <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'GC Horizon', sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;">Social starts<br>here.</div>
+        <div class="specimen-display" style="font-family:'GC Horizon',sans-serif;font-weight:700;text-transform:uppercase;">Social<br>Summit</div>
       </div>
     </div>
-  </div>
-
-  <!-- TYPOGRAPHY — SCRIPT -->
-  <div class="section">
-    <div class="section-label">Script typeface</div>
 
     <div class="type-block">
       <div class="type-block-label">Script — Mistrully</div>
       <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'Mistrully', cursive;font-weight:400;color:#2c8cff;">summit</div>
+        <div class="specimen-display" style="font-family:'Mistrully',cursive;font-weight:400;">Social Summit</div>
       </div>
+    </div>
+
+    <div class="btn-row">
+      <DownloadBtn href="/assets/downloads/Social_Summit_Fonts.zip" label="Download Social Summit Fonts" />
     </div>
   </div>
 
-  <!-- TYPOGRAPHY — BODY -->
+  <!-- THEME -->
   <div class="section">
-    <div class="section-label">Body typeface</div>
-
-    <div class="type-block">
-      <div class="type-block-label">Display — HEX Franklin Bold</div>
-      <div class="type-specimen">
-        <div class="specimen-display" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">The future of<br>real estate.</div>
-      </div>
-    </div>
-
-    <div class="type-block">
-      <div class="type-block-label">Weights</div>
-      <div class="type-specimen">
-        <div class="specimen-weights">
-          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;">Aa</div><div class="weight-label">Light</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;">Aa</div><div class="weight-label">Regular</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:500;">Aa</div><div class="weight-label">Medium</div></div>
-          <div class="weight-item"><div class="weight-char" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:700;">Aa</div><div class="weight-label">Bold</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="type-block">
-      <div class="type-block-label">Body — HEX Franklin Regular</div>
-      <div class="type-specimen">
-        <div class="specimen-body" style="font-family:'HEX Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;">Social Summit brings together the boldest voices in real estate social media — creators, brokers, and marketers shaping the way agents build audiences and grow businesses online.<br><br><strong>Bold for emphasis.</strong> Pair the display face with generous white space so headlines can breathe.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DEV GUIDE -->
-  <div class="section">
-    <div class="section-label">Developer guide</div>
+    <div class="section-label">Theme</div>
     <ThemePanel
       brandName="Social Summit"
       colors={[
-        { name: 'Deep Navy', hex: '#0a2f5c', role: 'Primary' },
-        { name: 'Sky Blue',  hex: '#2c8cff', role: 'Secondary' },
-        { name: 'Hot Pink',  hex: '#ec1c8e', role: 'Accent' },
-        { name: 'Onyx',      hex: '#0F0F0F', role: 'Neutral' },
-        { name: 'White',     hex: '#FFFFFF', role: 'Neutral' },
+        { name: 'Navy', hex: '#161A48', role: 'Primary' },
+        { name: 'Blue', hex: '#3E8FFA', role: 'Secondary' },
+        { name: 'Pink', hex: '#E47ED7', role: 'Accent' },
+        { name: 'White', hex: '#FFFFFF', role: 'Neutral' },
       ]}
       fonts={[
-        { name: 'GC Horizon',   role: 'Display' },
-        { name: 'Mistrully',    role: 'Script' },
-        { name: 'HEX Franklin', role: 'Body' },
+        { name: 'GC Horizon', role: 'Headline' },
+        { name: 'Mistrully', role: 'Script' },
       ]}
     />
   </div>

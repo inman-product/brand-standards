@@ -1,0 +1,56 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+import LogoTile from '../components/LogoTile.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const svg = (name: string) => `${base}/assets/images/imn-logos/IMN-${name}.svg`;
+const NAVY = 'background:#161a48;border:none;';
+const GRAY = 'background:#6b6b73;border:none;';
+---
+
+<BrandLayout
+  title="Inman Media Network"
+  eyebrow="Foundation"
+>
+
+  <!-- LOGOS -->
+  <div class="section">
+    <div class="section-label">Logos</div>
+
+    <div class="logo-subsection-label">Horizontal</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light"><img src={svg('Horizontal-Lockup-Full-Color-Navy')} style="width:82%;height:auto;" alt="IMN horizontal full color" /></LogoTile>
+      <LogoTile bg="light"><img src={svg('Horizontal-Lockup-Navy')} style="width:82%;height:auto;" alt="IMN horizontal navy" /></LogoTile>
+      <LogoTile bg="gray" style={GRAY}><img src={svg('Horizontal-Lockup-Full-Color-White')} style="width:82%;height:auto;" alt="IMN horizontal full color reversed" /></LogoTile>
+      <LogoTile bg="light" style={NAVY}><img src={svg('Horizontal-Lockup-White')} style="width:82%;height:auto;" alt="IMN horizontal white" /></LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Vertical</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light" tall><img src={svg('Vertical-Lockup-Full-Color-Navy')} style="width:50%;height:auto;" alt="IMN vertical full color" /></LogoTile>
+      <LogoTile bg="light" tall><img src={svg('Vertical-Lockup-Navy')} style="width:50%;height:auto;" alt="IMN vertical navy" /></LogoTile>
+      <LogoTile bg="gray" tall style={GRAY}><img src={svg('Vertical-Lockup-Full-Color-White')} style="width:50%;height:auto;" alt="IMN vertical full color reversed" /></LogoTile>
+      <LogoTile bg="light" tall style={NAVY}><img src={svg('Vertical-Lockup-White')} style="width:50%;height:auto;" alt="IMN vertical white" /></LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Logo mark</div>
+    <LogoGrid style="margin-bottom:16px;">
+      <LogoTile bg="light" tall><img src={svg('Logo-Mark-Full-Color-Navy')} style="width:40%;height:auto;" alt="IMN mark full color" /></LogoTile>
+      <LogoTile bg="light" tall><img src={svg('Logo-Mark-Navy')} style="width:40%;height:auto;" alt="IMN mark navy" /></LogoTile>
+      <LogoTile bg="gray" tall style={GRAY}><img src={svg('Logo-Mark-Full-Color-White')} style="width:40%;height:auto;" alt="IMN mark full color reversed" /></LogoTile>
+      <LogoTile bg="light" tall style={NAVY}><img src={svg('Logo-Mark-White')} style="width:40%;height:auto;" alt="IMN mark white" /></LogoTile>
+    </LogoGrid>
+
+    <div class="logo-subsection-label">Profile image</div>
+    <LogoGrid>
+      <LogoTile bg="light" tall><img src={svg('Porfile-Image')} style="height:80%;width:auto;max-width:80%;" alt="IMN profile image" /></LogoTile>
+    </LogoGrid>
+
+    <div class="btn-row" style="margin-top:20px;">
+      <DownloadBtn href="/assets/downloads/Inman_Media_Network_Logos.zip" label="Download IMN Logos" />
+    </div>
+  </div>
+
+</BrandLayout>
